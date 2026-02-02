@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ESP Datalogging App title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+
+    <header class="top-header">
+      <h1>ROV Data logging</h1>
+    </header>
+    <main>
+      <div class="button">
+        <button id="show-table">Show table</button>
+        <button id="show-plot">Show plot</button>
+      </div>
+
+      <div id="hidden-table" style="display: none">
+        <table class="data-table">
+        <thead>
+          <tr>
+            <th> Timestamp </th>
+            <th> Temperature </th>
+            <th> DO_mgL </th>
+            <th> PH </th>
+            <th> Depth </th>
+          </tr>
+        </thead>
+        
+        <tbody id="table-body">
+          <!-- Các hàng sẽ được thêm vào đây -->
+        </tbody>
+
+      </table>
+      </div>
+
+      <div id="hidden-plot" style="display: none">
+        <div class="chart-selector">
+          <label><input type="checkbox" id="tick-temp" unchecked> Temperature</label>
+          <label><input type="checkbox" id="tick-DO" unchecked> DO_mgL</label>
+          <label><input type="checkbox" id="tick-ph" checked> PH</label>
+          <label><input type="checkbox" id="tick-depth" checked> Depth </label>
+          <label><input type="checkbox" id="tick-combo" checked> Combo Chart </label>
+        </div>
+
+        <div class = "plot" id = "plot-temp">
+          <canvas id="tempChart"></canvas>
+        </div>
+
+        <div class = "plot" id = "plot-DO">
+          <canvas id="DOChart"></canvas>
+        </div>
+
+        <div class = "plot" id = "plot-ph">
+          <canvas id="phChart"></canvas>    
+        </div>
+
+        <div class = "plot" id ="plot-depth">
+          <canvas id ="depthChart"></canvas>
+        </div>
+
+        <div class = "plot" id = "plot-combo">
+          <canvas id="comboChart"></canvas>    
+        </div>
+      </div>
+
+      
+    </main>
+
+    <script type="module" src="scripts.js"></script>
+  </body>
+</html>

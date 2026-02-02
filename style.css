@@ -1,0 +1,135 @@
+body {
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 40;
+    background-color:#f4f2ff
+}
+
+.logo{
+    
+    height: 20px;
+    margin-right: 15px;
+    vertical-align: text-top;
+}
+
+.top-header{
+    
+    background-color: #7a5cff ;
+    color: white;
+    text-align:center;
+    padding:20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/*Table formatting*/
+.data-table{
+
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+.data-table , 
+.data-table th,
+.data-table td {
+    
+    border: 1px solid #ccc; /* Light gray grid lines */
+    border-collapse: collapse; /* Ensure borders merge cleanly */
+}
+
+.data-table th,
+.data-table td {
+    
+    padding: 10px; /*region outside to organize the table position*/
+    text-align: center;
+}
+
+.data-table thead{
+    background-color: #7a5cff;
+    color: white;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f0edff;
+}
+
+/*plot formatting*/
+.plot{
+    width: 90%;      /* 90% width viewport */
+    height: 400px;     /* 70% height viewport */
+    margin: 20px auto;
+    background-color: #f4f2ff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* container for buttons */
+.button {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    gap: 10px;               /* space between buttons */
+    margin-top: 20px;        /* spacing from content above */
+}
+
+/* button formatting */
+.button button {
+    font-size: 18px;           /* bigger text */
+    color: white;              /* white letters */
+    background-color: #7a5cff; /* initial background */
+    border: none;              /* remove default border */
+    padding: 10px 20px;        /* space inside button */
+    border-radius: 8px;        /* rounded corners */
+    cursor: pointer;           /* pointer on hover */
+    transition: all 0.2s ease; /* smooth transitions */
+}
+
+/* hover effect */
+.button button:hover {
+    background-color: #6a4de6; /* darker green on hover */
+    transform: scale(1.05);    /* slightly enlarge */
+}
+
+/* active / clicked effect */
+.button button:active {
+    background-color: #5a3dd1; /* even darker on click */
+    transform: scale(0.95);    /* shrink slightly when clicked */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
+/* Custom checkbox */
+.chart-selector input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #21bcb1;  /* border màu */
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+}
+
+/* Khi hover */
+.chart-selector
+{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 20px 0; 
+    gap: 20px;
+}
+
+.chart-selector input[type="checkbox"]:checked {
+  background-color: #6a4de6;
+}
+
+
+/* Khi được tick */
+.chart-selector input[type="checkbox"]:checked {
+    background-color: #7a5cff;
+}
